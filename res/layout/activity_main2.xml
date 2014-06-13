@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="550px"
+        android:layout_height="550px"
+        android:layout_alignParentLeft="true" >
+
+    </ListView>
+
+    <Button
+        android:id="@+id/btnMAINTE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="26dp"
+        android:text="戻る" />
+
+    <Button
+        android:id="@+id/btnENTRY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnMAINTE"
+        android:layout_alignBottom="@+id/btnMAINTE"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50dp"
+        android:text="削除" />
+
+</RelativeLayout>
