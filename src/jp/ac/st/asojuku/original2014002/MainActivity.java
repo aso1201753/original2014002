@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 
+
 public class MainActivity extends Activity implements View.OnClickListener {
 
 	SQLiteDatabase sdb = null;
@@ -32,7 +33,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		Button btnENTRY = (Button)findViewById(R.id.btnENTRY);
 		btnENTRY.setOnClickListener(this);
 
-		Button btnMAINTE = (Button)findViewById(R.id.btnMAINTE);
+		Button btnMAINTE = (Button)findViewById(R.id.btnBACK);
 		btnMAINTE.setOnClickListener(this);
 
 		Button btnCHECK = (Button)findViewById(R.id.btnCHECK);
@@ -68,26 +69,32 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 		etv.setText("");
 		break;
-		case R.id.btnMAINTE:
+		case R.id.btnBACK:
+			intent = new Intent(MainActivity.this, MainActivity2.class);
+			startActivity(intent);
+			break;
 
+
+		case R.id.btnCHECK:
+
+		String strHitokoto = helper.selectRandomHitokoto(sdb);
 
 		intent = new Intent(MainActivity.this, HitokotoActivity.class);
 		intent.putExtra("hitokoto", strHitokoto);
 
-		startActivity(insert);
+		startActivity(intent);
 		break;
 		}
 
 
 	}
 
-
-
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
+
 	}
 
 }

@@ -40,6 +40,47 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
 
 	}
 
+	public SQLiteCursor selectHitokotoList(SQLiteDatabase db){
+
+		SQLiteCursor cursor = null;
+
+		String sqlstr = " SELECT _id, phrase FROM Hitokoto ORDER BY _id; ";
+		try {
+
+			cursor = (SQLiteCursor)db.rawQuery(sqlstr, null);
+			if(cursor.getCount()!=0){
+
+				cursor.moveToFirst();
+			}
+		} catch (SQLException e) {
+			Log.e("ERROR", e.toString());
+
+		}finally {
+
+		}
+		return cursor;
+
+
+	}
+
+	public void deleteHitokoto(SQLiteDatabase db, int id){
+
+		String sqlstr = "DELETE FROM Hitokoto where _id = " + id + " ;";
+		try {
+			db.beginTransaction();
+			db.execSQL(sqlstr);
+			db.setTransactionSuccessful();
+
+		} catch (SQLException e) {
+			Log.e("ERROR", e.toString());
+
+		}finally {
+
+			db.endTransaction();
+
+		}
+	}
+
 	public void insertHitokoto(SQLiteDatabase db, String inputMsg){
 
 		String sqlstr = " insert into Hitokoto (phrase) values(' " + inputMsg + " ');";
@@ -48,7 +89,7 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
 			db.execSQL(sqlstr);
 			db.setTransactionSuccessful();
 		} catch (SQLException e) {
-			Log.e("ERROP", e.toString());
+			Log.e("ERROR", e.toString());
 		}finally {
 			db.endTransaction();
 

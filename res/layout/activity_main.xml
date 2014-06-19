@@ -10,7 +10,7 @@
     tools:context=".MainActivity" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/txvHITOKOTO"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -35,8 +35,8 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/textView1"
-        android:layout_below="@+id/textView1"
+        android:layout_alignRight="@+id/txvHITOKOTO"
+        android:layout_below="@+id/txvHITOKOTO"
         android:layout_marginTop="36dp"
         android:text="ひとことを登録"
         android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/edtMsg"
         android:layout_marginTop="61dp"
-        android:layout_toLeftOf="@+id/textView1"
+        android:layout_toLeftOf="@+id/txvHITOKOTO"
         android:text="メンテ" />
 
     <Button

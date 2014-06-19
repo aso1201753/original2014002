@@ -6,7 +6,7 @@
     android:orientation="vertical" >
 
     <ListView
-        android:id="@+id/listView1"
+        android:id="@+id/LvHITOKOTO"
         android:layout_width="550px"
         android:layout_height="550px"
         android:layout_alignParentLeft="true" >
@@ -14,7 +14,7 @@
     </ListView>
 
     <Button
-        android:id="@+id/btnMAINTE"
+        android:id="@+id/btnBACK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -24,11 +24,11 @@
         android:text="戻る" />
 
     <Button
-        android:id="@+id/btnENTRY"
+        android:id="@+id/btnDELETE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/btnMAINTE"
-        android:layout_alignBottom="@+id/btnMAINTE"
+        android:layout_alignBaseline="@+id/btnBACK"
+        android:layout_alignBottom="@+id/btnBACK"
         android:layout_alignParentRight="true"
         android:layout_marginRight="50dp"
         android:text="削除" />
