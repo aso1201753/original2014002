@@ -33,7 +33,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		Button btnENTRY = (Button)findViewById(R.id.btnENTRY);
 		btnENTRY.setOnClickListener(this);
 
-		Button btnMAINTE = (Button)findViewById(R.id.btnBACK);
+		Button btnMAINTE = (Button)findViewById(R.id.btnMAINTE);
 		btnMAINTE.setOnClickListener(this);
 
 		Button btnCHECK = (Button)findViewById(R.id.btnCHECK);
@@ -69,7 +69,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 		etv.setText("");
 		break;
-		case R.id.btnBACK:
+		case R.id.btnMAINTE:
 			intent = new Intent(MainActivity.this, MainActivity2.class);
 			startActivity(intent);
 			break;
